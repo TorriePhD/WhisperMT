@@ -23,8 +23,6 @@ for language in tqdm(list(datasetLabelsPath.iterdir())):
         pathsDict[path] = i
     for language2 in tqdm(list(language.iterdir())):
         print(f"Working on second {language2.name}")
-        if not (language2.name in ["hindi","marathi"] or language.name  in ["hindi","marathi"]):
-            continue
         if language2.name in ["dutch","afrikaans"]:
             continue
         for file in tqdm(list(language2.iterdir())):
